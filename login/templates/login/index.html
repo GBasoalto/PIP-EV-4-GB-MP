@@ -1,0 +1,32 @@
+{% extends "login/base.html" %}
+{% load static %}
+{% block title %}Ingreso de usuarios{% endblock %}
+
+{% block content %}
+
+{% comment %} {% if form.non_field_errors %}
+  <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+    {% for error in form.non_field_errors %}
+      {{ error }}
+    {% endfor %}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{% endif %} {% endcomment %}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow" style="width: 25rem;">
+    <img src="{% static 'images/logo.jpg' %}" class="card-img-top" alt="logo">
+    <h3 class="text-center mb-3">Iniciar sesión</h3>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary w-100 mt-2">Ingresar</button>
+      <div class="text-center mt-3">
+        {% comment %} <a href="{% url 'recuperar' %}">¿Desea recuperar su contraseña?</a> {% endcomment %}
+      </div>
+    </form>
+  </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,23 @@
+h1, h2, h3, h4, h5 {
+    color: #2191FB;
+}
+
+input{
+    background-color: #B2ECE1;
+    color: #fff;
+}
+
+p {
+    color: #000; 
+}
+
+label {
+    color: #bebebe;/
+}
+
+footer {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    background-color: #343a40; 
+}
+
